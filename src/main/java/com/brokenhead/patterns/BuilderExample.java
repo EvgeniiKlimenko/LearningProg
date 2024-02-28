@@ -7,6 +7,9 @@ public class BuilderExample {
     private int id;
     private boolean hasJob;
 
+    /**
+     * Private constructor for the final call .build();
+     */
     private BuilderExample(BuilderExampleBuilder builderExample) {
         this.name = builderExample.name;
         this.id = builderExample.id;
@@ -23,6 +26,10 @@ public class BuilderExample {
         private int id;
         private boolean hasJob;
 
+        /**
+         * Constructor for creation of an object with basic or default parameters, minimal
+         * set of values and etc.
+         */
         public BuilderExampleBuilder(String name, int id) {
             this.name = name;
             this.id = id;
