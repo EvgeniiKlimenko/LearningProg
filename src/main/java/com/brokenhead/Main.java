@@ -7,7 +7,6 @@ import com.brokenhead.patterns.adapter.DroneTaxi;
 import com.brokenhead.patterns.observer.MagazineReader;
 import com.brokenhead.patterns.observer.Observer;
 import com.brokenhead.patterns.observer.PublishingHouse;
-import com.brokenhead.patterns.observer.Subject;
 import com.brokenhead.patterns.strategy.Duck;
 import com.brokenhead.patterns.strategy.MallardDuck;
 import com.brokenhead.patterns.strategy.RubberDuck;
@@ -38,8 +37,7 @@ public class Main {
         PublishingHouse igromania = new PublishingHouse();
         Observer readerOne = new MagazineReader();
         readerOne.subscribeTo(igromania);
-        igromania.setImportantValue(150); // here notifySubscribers() is triggered
-
+        igromania.setImportantValue(150); // notifySubscribers() is triggered here
 
 
     }
