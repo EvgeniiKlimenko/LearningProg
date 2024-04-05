@@ -23,7 +23,7 @@ public class SimpleSort {
         }
         System.out.println("Bubble sort. After: " + Arrays.toString(array));
     }
-
+    
     public void selectSort(int[] array) {
         System.out.println("Select sort. Before: " + Arrays.toString(array));
         int outer, inner, min;
@@ -35,7 +35,8 @@ public class SimpleSort {
                     min = inner;
                 }
             }
-            int temp = array[outer]; // swap old min value with new min value
+            // then, swap old min value with new min value
+            int temp = array[outer];
             array[outer] = array[min];
             array[min] = temp;
 
