@@ -1,6 +1,8 @@
 package com.brokenhead;
 
+import com.brokenhead.algorithms.PalindromeCheck;
 import com.brokenhead.algorithms.SimpleSort;
+import com.brokenhead.algorithms.SingleNumberFind;
 import com.brokenhead.patterns.adapter.Bird;
 import com.brokenhead.patterns.adapter.Drone;
 import com.brokenhead.patterns.adapter.DroneAdapter;
@@ -44,6 +46,16 @@ public class Main {
         int[] array = {55, 88, 33, 77, 11, 22, 99, 44, 555, 111};
         SimpleSort simpleSort = new SimpleSort();
         //simpleSort.bubbleSort(array);
-        simpleSort.selectSort(array);
+        //simpleSort.selectSort(array);
+
+        System.out.println("Palindrome check:");
+        //boolean result = PalindromeCheck.isPalindromeByIndexes("A man, a plan, a canal: Panama");
+        //boolean result = PalindromeCheck.isPalindromeByIndexes("race a car");
+        //System.out.println("Palindrome check result: " + result);
+
+        System.out.println("Single number check:");
+        int[] nums = {4,1,2,1,2};
+        int singleNumberResult = SingleNumberFind.singleNumber(nums);
+
     }
 }
