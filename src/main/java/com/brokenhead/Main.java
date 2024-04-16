@@ -1,5 +1,6 @@
 package com.brokenhead;
 
+import com.brokenhead.algorithms.InterviewTasks;
 import com.brokenhead.algorithms.PalindromeCheck;
 import com.brokenhead.algorithms.SimpleSort;
 import com.brokenhead.algorithms.SingleNumberFind;
@@ -56,6 +57,16 @@ public class Main {
         System.out.println("Single number check:");
         int[] nums = {4,1,2,1,2};
         int singleNumberResult = SingleNumberFind.singleNumber(nums);
+        System.out.println("Single lonely number : " + singleNumberResult);
+
+        System.out.println("Factorial count:");
+        InterviewTasks tasks = new InterviewTasks();
+        int factorial = tasks.countFactorial(4);
+        System.out.println("Factorial result - " + factorial);
+
+        System.out.println("Find most frequently appeared char in string:");
+        char found = tasks.mostFrequentSymbol("Abbbcdefhhhh");
+        System.out.println("Most frequently appeared char result - " + found);
 
     }
 }
