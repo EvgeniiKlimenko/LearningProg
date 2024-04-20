@@ -1,9 +1,6 @@
 package com.brokenhead;
 
-import com.brokenhead.algorithms.InterviewTasks;
-import com.brokenhead.algorithms.PalindromeCheck;
-import com.brokenhead.algorithms.SimpleSort;
-import com.brokenhead.algorithms.SingleNumberFind;
+import com.brokenhead.algorithms.*;
 import com.brokenhead.patterns.adapter.Bird;
 import com.brokenhead.patterns.adapter.Drone;
 import com.brokenhead.patterns.adapter.DroneAdapter;
@@ -68,5 +65,12 @@ public class Main {
         char found = tasks.mostFrequentSymbol("Abbbcdefhhhh");
         System.out.println("Most frequently appeared char result - " + found);
 
+        System.out.println("Find longest common prefix in string array:");
+        LongestCommonPrefix prefix = new LongestCommonPrefix();
+        String[] words = {"flower","flow","flowight"};
+        //String[] words = {"a", "ab", "acv"};
+        //String[] words = {"a", "a", "b"};
+        String foundPrefix = prefix.longestCommonPrefix(words);
+        System.out.println("longest common prefix result - " + foundPrefix);
     }
 }
