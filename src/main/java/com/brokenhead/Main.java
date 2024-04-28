@@ -1,6 +1,7 @@
 package com.brokenhead;
 
 import com.brokenhead.algorithms.*;
+import com.brokenhead.datastructures.SingleLinkedList;
 import com.brokenhead.patterns.adapter.Bird;
 import com.brokenhead.patterns.adapter.Drone;
 import com.brokenhead.patterns.adapter.DroneAdapter;
@@ -68,9 +69,19 @@ public class Main {
         System.out.println("Find longest common prefix in string array:");
         LongestCommonPrefix prefix = new LongestCommonPrefix();
         String[] words = {"flower","flow","flowight"};
-        //String[] words = {"a", "ab", "acv"};
-        //String[] words = {"a", "a", "b"};
         String foundPrefix = prefix.longestCommonPrefix(words);
         System.out.println("longest common prefix result - " + foundPrefix);
+
+
+        SingleLinkedList myList = new SingleLinkedList();
+        myList.add(1);
+        myList.add(3);
+        myList.add(5);
+        myList.add(7);
+        myList.add(10);
+
+        System.out.println("List before reverse: " + myList.toString());
+        myList.reverseList();
+        System.out.println("List after reverse: " + myList.toString());
     }
 }

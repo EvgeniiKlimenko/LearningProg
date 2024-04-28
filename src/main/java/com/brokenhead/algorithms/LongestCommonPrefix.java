@@ -6,18 +6,17 @@ public class LongestCommonPrefix {
         if (strs.length == 1) {
             return strs[0];
         }
-        //boolean isCurrentRunFullMatch = true;
-        int commonPrefixEndsAt = 0;
 
+        int commonPrefixEndsAt = 0;
         while (true) {
             for (int i = 0; i < (strs.length - 1); i++) {
                 if (strs[i].isEmpty()) {
                     return strs[i];
                 }
 
+                // check if prefix.length == string.length. Means - end search
                 if (strs[i].length() == commonPrefixEndsAt ||
                         (strs[i + 1].length() == commonPrefixEndsAt)) {
-                    //isCurrentRunFullMatch = false;
                     return strs[i].substring(0, commonPrefixEndsAt);
                 }
 
